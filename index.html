@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apeksha Raina</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #fdf8f3;
+  --peach: #f5c9a8;
+  --peach-light: #fde8d8;
+  --sage: #c8d8c0;
+  --sage-light: #e8f0e4;
+  --lavender: #d4c8e8;
+  --lavender-light: #ede8f8;
+  --text: #1a1512;
+  --text-muted: #7a6e65;
+  --border: #e8ddd4;
+  --white: #ffffff;
+  --card-bg: #fffcf8;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(253,248,243,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--text); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+
+/* MARQUEE */
+.marquee-bar {
+  background: var(--text);
+  color: var(--peach-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  padding: 0.55rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+.marquee-inner { display: inline-block; animation: marquee 22s linear infinite; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* HERO */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: start;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--peach-light);
+  border: 1px solid var(--peach);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow .dot { width: 7px; height: 7px; background: #e07b3a; border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+.hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.hero-name em { font-style: italic; color: var(--text-muted); }
+.hero-eyebrow-emoji { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; line-height: 1; }
+.wave { font-style: normal; display: inline-block; font-size: 0.75em; vertical-align: middle; margin-left: 0.1em; }
+.hero-bio { font-size: 1.05rem; color: var(--text-muted); line-height: 1.75; max-width: 520px; margin-bottom: 2rem; }
+.hero-bio strong { color: var(--text); font-weight: 600; }
+.hero-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+.hero-contact a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+.hero-contact a:hover { color: var(--text); }
+.hero-aside { padding-top: 1rem; }
+.hero-tags { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-end; }
+.tag { background: var(--white); border: 1px solid var(--border); border-radius: 100px; padding: 0.4rem 1.1rem; font-size: 0.78rem; font-weight: 500; color: var(--text-muted); white-space: nowrap; }
+.tag.peach { background: var(--peach-light); border-color: var(--peach); }
+.tag.sage { background: var(--sage-light); border-color: var(--sage); }
+.tag.lavender { background: var(--lavender-light); border-color: var(--lavender); }
+
+/* DIVIDER */
+.divider { max-width: 900px; margin: 0 auto; padding: 0 3rem; border-top: 1px solid var(--border); }
+
+/* SECTIONS */
+section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
+.section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; }
+.section-heading { font-family: 'DM Serif Display', serif; font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 2.5rem; }
+
+/* STATS ROW */
+.stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem; }
+.stat-box { background: var(--card-bg); padding: 1.8rem; text-align: center; }
+.stat-box:nth-child(1) { background: var(--peach-light); }
+.stat-box:nth-child(2) { background: var(--sage-light); }
+.stat-box:nth-child(3) { background: var(--lavender-light); }
+.stat-box:nth-child(4) { background: var(--peach-light); }
+.stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; line-height: 1; margin-bottom: 0.3rem; }
+.stat-desc { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; line-height: 1.4; }
+
+/* EXPERIENCE CARDS */
+.exp-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+.exp-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: box-shadow 0.2s, border-color 0.2s; }
+.exp-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); border-color: var(--peach); }
+.exp-card-header { padding: 1.8rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.exp-card.open .exp-card-header { border-bottom: 1px solid var(--border); }
+.exp-company { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.2rem; }
+.exp-role { font-size: 0.82rem; color: var(--text-muted); font-weight: 500; }
+.exp-right { text-align: right; }
+.exp-date { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+.exp-chip { display: inline-block; background: var(--peach-light); border: 1px solid var(--peach); border-radius: 100px; padding: 0.2rem 0.7rem; font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
+.exp-card:nth-child(2) .exp-chip { background: var(--sage-light); border-color: var(--sage); }
+.exp-card:nth-child(3) .exp-chip { background: var(--lavender-light); border-color: var(--lavender); }
+.exp-toggle { width: 28px; height: 28px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--text-muted); transition: transform 0.25s, background 0.2s; flex-shrink: 0; margin-left: 1.5rem; margin-top: 0.2rem; }
+.exp-card.open .exp-toggle { transform: rotate(45deg); background: var(--border); }
+.exp-body { display: none; padding: 1.5rem 2rem 2rem; }
+.exp-card.open .exp-body { display: block; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.exp-bullets li { display: flex; gap: 0.8rem; font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
+.exp-bullets li::before { content: '→'; color: var(--peach); flex-shrink: 0; font-weight: 600; margin-top: 0.05rem; }
+.exp-mini-stats { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.mini-stat { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 0.6rem 1rem; text-align: center; }
+.mini-stat-num { font-family: 'DM Serif Display', serif; font-size: 1.2rem; line-height: 1; margin-bottom: 0.2rem; }
+.mini-stat-label { font-size: 0.68rem; color: var(--text-muted); font-weight: 500; }
+
+/* SKILLS TABLE */
+.skills-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.skills-table tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.skills-table tr:last-child { border-bottom: none; }
+.skills-table tr:hover { background: var(--peach-light); }
+.skills-table td { padding: 0.85rem 0.5rem; vertical-align: middle; }
+.skills-table td:first-child { width: 2rem; font-size: 1rem; text-align: center; }
+.skills-table td:nth-child(2) { font-weight: 500; color: var(--text); width: 55%; }
+.skills-table td:last-child { color: var(--text-muted); font-size: 0.78rem; text-align: right; }
+
+/* EDUCATION TABLE */
+.edu-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.edu-table tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.edu-table tr:last-child { border-bottom: none; }
+.edu-table tr:hover { background: var(--sage-light); }
+.edu-table td { padding: 0.85rem 0.5rem; vertical-align: middle; }
+.edu-table td:first-child { font-family: 'DM Serif Display', serif; font-size: 1.3rem; width: 5rem; color: var(--text); }
+.edu-table td:nth-child(2) { font-weight: 500; color: var(--text); }
+.edu-table td:nth-child(2) span { display: block; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); margin-top: 0.1rem; }
+.edu-table td:last-child { text-align: right; }
+
+/* BADGES */
+.skills-badge { display: inline-block; padding: 0.15rem 0.65rem; border-radius: 100px; font-size: 0.7rem; font-weight: 500; background: var(--sage-light); border: 1px solid var(--sage); color: var(--text-muted); }
+.skills-badge.lavender { background: var(--lavender-light); border-color: var(--lavender); }
+.skills-badge.peach { background: var(--peach-light); border-color: var(--peach); }
+
+/* SOCIAL */
+.social-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.social-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; transition: box-shadow 0.2s; }
+.social-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.social-card:nth-child(1) { background: var(--peach-light); border-color: var(--peach); }
+.social-card:nth-child(2) { background: var(--sage-light); border-color: var(--sage); }
+.social-card:nth-child(3) { background: var(--lavender-light); border-color: var(--lavender); }
+.social-emoji { font-size: 1.6rem; margin-bottom: 0.8rem; }
+.social-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.5rem; }
+.social-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.social-impact { margin-top: 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--text); }
+
+/* FOOTER */
+footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.footer-name { font-family: 'DM Serif Display', serif; font-size: 1.4rem; margin-bottom: 0.3rem; }
+.footer-sub { font-size: 0.8rem; color: var(--text-muted); }
+.footer-links { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-end; }
+.footer-links a { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+
+/* SCROLL REVEAL — visible by default, animated as enhancement */
+.reveal { opacity: 1; transform: none; }
+
+/* LARGE MONITORS */
+@media (min-width: 1400px) {
+  .hero, section, .divider, footer { max-width: 1100px; }
+  .hero { padding: 7rem 4rem 5rem; }
+  section { padding: 5rem 4rem; }
+  .hero-name { font-size: 6rem; }
+  .section-heading { font-size: 2.6rem; }
+}
+
+/* TABLET LANDSCAPE */
+@media (max-width: 1199px) and (min-width: 769px) {
+  nav { padding: 1rem 2rem; }
+  .hero { padding: 5rem 2.5rem 3.5rem; gap: 2.5rem; }
+  section { padding: 3.5rem 2.5rem; }
+  .divider { padding: 0 2.5rem; }
+}
+
+/* IPAD PORTRAIT */
+@media (max-width: 768px) and (min-width: 600px) {
+  nav { padding: 1rem 2rem; }
+  .hero { grid-template-columns: 1fr; padding: 4rem 2rem 3rem; gap: 2rem; }
+  .hero-tags { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+  section { padding: 3rem 2rem; }
+  .divider { padding: 0 2rem; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .social-grid { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+  .footer-links { align-items: flex-start; }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  nav { padding: 0.9rem 1.25rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 2.5rem 1.25rem 2rem; gap: 1.5rem; }
+  .hero-name { font-size: clamp(2.2rem, 9vw, 3rem); margin-bottom: 1rem; }
+  .hero-bio { font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .hero-aside { padding-top: 0; }
+  .hero-tags { flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 0.4rem; }
+  .tag { font-size: 0.72rem; padding: 0.3rem 0.8rem; }
+  section { padding: 2.5rem 1.25rem; }
+  .divider { padding: 0 1.25rem; }
+  .section-heading { font-size: 1.7rem; margin-bottom: 1.5rem; }
+  .stats-row { grid-template-columns: 1fr 1fr; border-radius: 12px; margin-bottom: 1.5rem; }
+  .stat-box { padding: 1.1rem 0.75rem; }
+  .stat-num { font-size: 1.5rem; }
+  .stat-desc { font-size: 0.68rem; }
+  .exp-cards { gap: 0.75rem; }
+  .exp-card { border-radius: 12px; }
+  .exp-card-header { padding: 1.1rem 1rem; gap: 0.5rem; }
+  .exp-company { font-size: 1.1rem; }
+  .exp-role { font-size: 0.75rem; }
+  .exp-toggle { margin-left: 0.75rem; width: 24px; height: 24px; font-size: 0.9rem; }
+  .exp-body { padding: 1rem 1rem 1.25rem; }
+  .exp-bullets li { font-size: 0.84rem; }
+  .exp-mini-stats { gap: 0.5rem; padding-top: 1rem; margin-top: 1rem; }
+  .mini-stat { padding: 0.5rem 0.75rem; }
+  .mini-stat-num { font-size: 1rem; }
+  .mini-stat-label { font-size: 0.62rem; }
+  .skills-table td, .edu-table td { padding: 0.7rem 0.3rem; }
+  .skills-table { font-size: 0.82rem; }
+  .edu-table { font-size: 0.82rem; }
+  .edu-table td:first-child { font-size: 1.1rem; width: 4.5rem; }
+  .social-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .social-card { padding: 1.25rem; }
+  footer { flex-direction: column; gap: 1.25rem; align-items: flex-start; padding: 2rem 1.25rem; }
+  .footer-links { align-items: flex-start; }
+  .footer-name { font-size: 1.2rem; }
+}
+
+@media (max-width: 380px) {
+  .hero-name { font-size: 2rem; }
+  .stat-num { font-size: 1.3rem; }
+  .exp-card-header { flex-wrap: wrap; }
+  .exp-right { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Apeksha Raina</div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+</nav>
+
+<div class="marquee-bar">
+  <div class="marquee-inner">
+    ✦ GROWTH STRATEGY &nbsp;&nbsp;·&nbsp;&nbsp; KEY ACCOUNT MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; DATA ANALYSIS &nbsp;&nbsp;·&nbsp;&nbsp; A/B TESTING &nbsp;&nbsp;·&nbsp;&nbsp; FUNNEL OPTIMISATION &nbsp;&nbsp;·&nbsp;&nbsp; STAKEHOLDER COMMUNICATION &nbsp;&nbsp;·&nbsp;&nbsp; POWER BI &nbsp;&nbsp;·&nbsp;&nbsp; ADVANCED EXCEL &nbsp;&nbsp;·&nbsp;&nbsp; ✦ GROWTH STRATEGY &nbsp;&nbsp;·&nbsp;&nbsp; KEY ACCOUNT MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; DATA ANALYSIS &nbsp;&nbsp;·&nbsp;&nbsp; A/B TESTING &nbsp;&nbsp;·&nbsp;&nbsp; FUNNEL OPTIMISATION &nbsp;&nbsp;·&nbsp;&nbsp; STAKEHOLDER COMMUNICATION &nbsp;&nbsp;·&nbsp;&nbsp; POWER BI &nbsp;&nbsp;·&nbsp;&nbsp; ADVANCED EXCEL &nbsp;&nbsp;·&nbsp;&nbsp;
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span class="dot"></span> Currently @ Zomato, Delhi</div>
+    <h1 class="hero-name">Hey, I'm<br>Apeksha <em>Raina</em> <span class="wave">👋</span></h1>
+    <p class="hero-bio">Growth strategist with a knack for turning data into decisions. I own a <strong>₹100Cr+/month market</strong> at Zomato, building frameworks that drive revenue, improve forecast accuracy, and make campaigns work meaningfully harder.</p>
+    <div class="hero-contact">
+      <a href="mailto:rainapeksha7@gmail.com">📧 rainapeksha7@gmail.com</a>
+      <a href="tel:+918700644494">📱 +91 87006 44494</a>
+    </div>
+  </div>
+  <div class="hero-aside">
+    <div class="hero-tags">
+      <div class="tag peach">Growth Strategy</div>
+      <div class="tag sage">Data Analysis</div>
+      <div class="tag">Key Account Management</div>
+      <div class="tag lavender">A/B Testing</div>
+      <div class="tag">SRCC, DU — 8.81 GPA</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section id="experience">
+  <div class="section-label">Work Experience</div>
+  <h2 class="section-heading">Where I've been building</h2>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">30%+</div><div class="stat-desc">YoY Revenue Growth</div></div>
+    <div class="stat-box"><div class="stat-num">50%</div><div class="stat-desc">AOV Increase YoY</div></div>
+    <div class="stat-box"><div class="stat-num">15–25%</div><div class="stat-desc">Campaign ROI Lift</div></div>
+    <div class="stat-box"><div class="stat-num">5%</div><div class="stat-desc">QoQ Retention Gain</div></div>
+  </div>
+
+  <div class="exp-cards">
+
+    <div class="exp-card open">
+      <div class="exp-card-header" onclick="toggle(this)">
+        <div>
+          <div class="exp-company">Zomato</div>
+          <div class="exp-role">Key Accounts Manager</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div class="exp-right">
+            <div class="exp-date">Sep 2024 – Present</div>
+            <div class="exp-chip">Full-time</div>
+          </div>
+          <div class="exp-toggle">+</div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-bullets">
+          <li>Owned and scaled JFL portfolio, delivering 30%+ YoY growth through pricing, merchandising, and geo-led investment optimization.</li>
+          <li>Improved forecast accuracy to ~70% in a ₹100Cr monthly market by building structured performance frameworks strengthening planning discipline.</li>
+          <li>Led 0→1 and iterative product launches — translating consumer insights into experiments that improved adoption, AOV (~50% YoY), and retention (5% QoQ).</li>
+          <li>Increased campaign ROI by 15–25% by driving strategic partnerships to capture demand spikes and optimizing allocation between promotions and in-app ads.</li>
+          <li>Drove cross-functional initiatives with product, ops, and tech — reducing support-requiring orders from 12% → 5% QoQ.</li>
+          <li>Negotiated complex commercials improving contribution margins by 5% while strengthening long-term partner alignment.</li>
+          <li>Onboarded 100+ stores using geo expansion playbooks with Kepler and heat maps technology.</li>
+          <li>Delivered ~30% uplift in cuisine share by improving ROI and reducing CAC through sharper user segmentation and focused performance marketing, driving efficient customer acquisition, stronger unit economics, and scalable growth across brands.</li>
+          <li>Moved brands from standard ad-spend commitments to incremental revenue-share model, unlocking ~52% higher ad revenue.</li>
+          <li>Drove better conversions by optimizing discounts and menu engineering, replacing flat packaging fees with AOV-linked pricing — improving cart-to-order conversion and reducing price-shock-led drop-offs.</li>
+          <li>Increased AOV by ~11% by aligning brand participation and campaign mix across seasonal and festival campaigns on platform.</li>
+          <li>Delivered ~5 percentage point increase in brand share across platforms and drove the portfolio to an all-time high.</li>
+          <li>Scaled a self-logistics brand to Zomato Logistics, expanding delivery subzones and driving a 30% increase in sales. Reduced bad-order escalations by 50%+ through stronger tracking and support systems, and boosted market share by consolidating the brand exclusively on Zomato.</li>
+        </ul>
+        <div class="exp-mini-stats">
+          <div class="mini-stat"><div class="mini-stat-num">₹100Cr</div><div class="mini-stat-label">Monthly market</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">100+</div><div class="mini-stat-label">Stores onboarded</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">~70%</div><div class="mini-stat-label">Forecast accuracy</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header" onclick="toggle(this)">
+        <div>
+          <div class="exp-company">2COMS</div>
+          <div class="exp-role">Research Associate</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div class="exp-right">
+            <div class="exp-date">Dec 2020 – Mar 2021</div>
+            <div class="exp-chip">Internship</div>
+          </div>
+          <div class="exp-toggle">+</div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-bullets">
+          <li>Co-authored research paper on new trends in employment, focused on the GIG economy.</li>
+          <li>Collected and analyzed industry data working directly under the CEO.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header" onclick="toggle(this)">
+        <div>
+          <div class="exp-company">Unilarity</div>
+          <div class="exp-role">Assistant Client Coordinator</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div class="exp-right">
+            <div class="exp-date">Jul – Nov 2020</div>
+            <div class="exp-chip">Internship</div>
+          </div>
+          <div class="exp-toggle">+</div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-bullets">
+          <li>Delivered tailored recommendations and strategies to meet diverse client objectives.</li>
+          <li>Applied SEO best practices to enhance content visibility and reach. Received appreciation letters from Global CEO and client leadership.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header" onclick="toggle(this)">
+        <div>
+          <div class="exp-company">Globalopz</div>
+          <div class="exp-role">Research Associate</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div class="exp-right">
+            <div class="exp-date">Mar – Sep 2020</div>
+            <div class="exp-chip">Internship</div>
+          </div>
+          <div class="exp-toggle">+</div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-bullets">
+          <li>Organized major events including National Handloom Day and Indiajoy — 5,000+ attendees each.</li>
+          <li>Managed global youth webinars engaging 1,000+ participants. Received LOR from CEO.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="education">
+  <div class="section-label">Education</div>
+  <h2 class="section-heading">Academic background</h2>
+  <table class="edu-table">
+    <tr>
+      <td>8.81 GPA</td>
+      <td>BA (Hons) Economics<span>Shri Ram College of Commerce, Delhi University</span></td>
+      <td><span class="skills-badge peach">2022</span></td>
+    </tr>
+    <tr>
+      <td>97%</td>
+      <td>CBSE Class XII<span>GD Goenka Public School</span></td>
+      <td><span class="skills-badge">2019</span></td>
+    </tr>
+    <tr>
+      <td>9.6 CGPA</td>
+      <td>CBSE Class X<span>GD Goenka Public School</span></td>
+      <td><span class="skills-badge lavender">2017</span></td>
+    </tr>
+  </table>
+</section>
+
+<div class="divider"></div>
+
+<section id="impact">
+  <div class="section-label">Community &amp; Social Impact</div>
+  <h2 class="section-heading">Giving back, on the ground</h2>
+  <div class="social-grid">
+    <div class="social-card">
+      <div class="social-emoji">🏭</div>
+      <div class="social-title">Project Asha &amp; Vittshala</div>
+      <div class="social-desc">Visited 20+ factories and slums across Delhi — Goonj NGO, Bawana &amp; Kadipur Industrial Areas.</div>
+      <div class="social-impact">200+ lives impacted</div>
+    </div>
+    <div class="social-card">
+      <div class="social-emoji">📚</div>
+      <div class="social-title">Project Khushhali</div>
+      <div class="social-desc">Palwal, Haryana — covered 7 villages in 2 days, inculcating financial literacy in rural communities.</div>
+      <div class="social-impact">200+ people reached</div>
+    </div>
+    <div class="social-card">
+      <div class="social-emoji">🎭</div>
+      <div class="social-title">Project Sahay</div>
+      <div class="social-desc">Presentations and plays at Sarvodaya Vidyalaya, Timarpur for young students.</div>
+      <div class="social-impact">100+ students impacted</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="skills">
+  <div class="section-label">Capabilities</div>
+  <h2 class="section-heading">What I bring to the table</h2>
+  <table class="skills-table">
+    <tr>
+      <td>📈</td>
+      <td>Growth &amp; Funnel Optimisation</td>
+      <td><span class="skills-badge peach">Core Skill</span></td>
+    </tr>
+    <tr>
+      <td>📊</td>
+      <td>Excel &amp; Google Sheets</td>
+      <td><span class="skills-badge">Advanced Modelling</span></td>
+    </tr>
+    <tr>
+      <td>🧪</td>
+      <td>Experimentation &amp; A/B Testing</td>
+      <td><span class="skills-badge peach">Core Skill</span></td>
+    </tr>
+    <tr>
+      <td>🔍</td>
+      <td>Data Analysis &amp; Insight Generation</td>
+      <td><span class="skills-badge peach">Core Skill</span></td>
+    </tr>
+    <tr>
+      <td>🤝</td>
+      <td>Technical Stakeholder Communication</td>
+      <td><span class="skills-badge lavender">Soft Skill</span></td>
+    </tr>
+    <tr>
+      <td>📉</td>
+      <td>Power BI &amp; Presentations</td>
+      <td><span class="skills-badge">Reporting &amp; Viz</span></td>
+    </tr>
+  </table>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <div class="footer-name">Apeksha Raina</div>
+    <div class="footer-sub">Key Accounts Manager · Zomato · Delhi</div>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:rainapeksha7@gmail.com">rainapeksha7@gmail.com</a>
+    <a href="tel:+918700644494">+91 87006 44494</a>
+  </div>
+</footer>
+
+<script>
+  function toggle(header) {
+    const card = header.closest('.exp-card');
+    card.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
