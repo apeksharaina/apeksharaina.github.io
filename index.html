@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apeksha Raina</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Apeksha Raina, Client & Account Growth Leader</title>
+<meta name="description" content="Apeksha Raina, Category Manager at Zomato. I own enterprise client relationships across a $15.8M+/month portfolio and I'm open to remote Customer Success roles with US startups.">
+<style>
+  /* Helvetica everywhere, with sane fallbacks for platforms that lack it */
+  :root {
+    --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+</style>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -27,7 +34,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.7;
 }
@@ -45,7 +52,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-.nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--text); }
+.nav-logo { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text); }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
 .nav-links a:hover { color: var(--text); }
@@ -89,8 +96,8 @@ nav {
 }
 .hero-eyebrow .dot { width: 7px; height: 7px; background: #e07b3a; border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
-.hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
-.hero-name em { font-style: italic; color: var(--text-muted); }
+.hero-name { font-family: var(--font-heading); font-weight: 700; font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.hero-name em { font-style: normal; font-weight: 400; color: var(--text-muted); }
 .hero-eyebrow-emoji { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; line-height: 1; }
 .wave { font-style: normal; display: inline-block; font-size: 0.75em; vertical-align: middle; margin-left: 0.1em; }
 .hero-bio { font-size: 1.05rem; color: var(--text-muted); line-height: 1.75; max-width: 520px; margin-bottom: 2rem; }
@@ -111,7 +118,7 @@ nav {
 /* SECTIONS */
 section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
 .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; }
-.section-heading { font-family: 'DM Serif Display', serif; font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 2.5rem; }
+.section-heading { font-family: var(--font-heading); font-weight: 700; font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 2.5rem; }
 
 /* STATS ROW */
 .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem; }
@@ -120,7 +127,7 @@ section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
 .stat-box:nth-child(2) { background: var(--sage-light); }
 .stat-box:nth-child(3) { background: var(--lavender-light); }
 .stat-box:nth-child(4) { background: var(--peach-light); }
-.stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; line-height: 1; margin-bottom: 0.3rem; }
+.stat-num { font-family: var(--font-heading); font-weight: 700; font-size: 2rem; line-height: 1; margin-bottom: 0.3rem; }
 .stat-desc { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; line-height: 1.4; }
 
 /* EXPERIENCE CARDS */
@@ -129,7 +136,7 @@ section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
 .exp-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); border-color: var(--peach); }
 .exp-card-header { padding: 1.8rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
 .exp-card.open .exp-card-header { border-bottom: 1px solid var(--border); }
-.exp-company { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.2rem; }
+.exp-company { font-family: var(--font-heading); font-weight: 700; font-size: 1.3rem; margin-bottom: 0.2rem; }
 .exp-role { font-size: 0.82rem; color: var(--text-muted); font-weight: 500; }
 .exp-right { text-align: right; }
 .exp-date { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
@@ -145,7 +152,7 @@ section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
 .exp-bullets li::before { content: '→'; color: var(--peach); flex-shrink: 0; font-weight: 600; margin-top: 0.05rem; }
 .exp-mini-stats { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 .mini-stat { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 0.6rem 1rem; text-align: center; }
-.mini-stat-num { font-family: 'DM Serif Display', serif; font-size: 1.2rem; line-height: 1; margin-bottom: 0.2rem; }
+.mini-stat-num { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; line-height: 1; margin-bottom: 0.2rem; }
 .mini-stat-label { font-size: 0.68rem; color: var(--text-muted); font-weight: 500; }
 
 /* SKILLS TABLE */
@@ -164,7 +171,7 @@ section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
 .edu-table tr:last-child { border-bottom: none; }
 .edu-table tr:hover { background: var(--sage-light); }
 .edu-table td { padding: 0.85rem 0.5rem; vertical-align: middle; }
-.edu-table td:first-child { font-family: 'DM Serif Display', serif; font-size: 1.3rem; width: 5rem; color: var(--text); }
+.edu-table td:first-child { font-family: var(--font-heading); font-weight: 700; font-size: 1.3rem; width: 5rem; color: var(--text); }
 .edu-table td:nth-child(2) { font-weight: 500; color: var(--text); }
 .edu-table td:nth-child(2) span { display: block; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); margin-top: 0.1rem; }
 .edu-table td:last-child { text-align: right; }
@@ -188,7 +195,7 @@ section { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
 
 /* FOOTER */
 footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-.footer-name { font-family: 'DM Serif Display', serif; font-size: 1.4rem; margin-bottom: 0.3rem; }
+.footer-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.4rem; margin-bottom: 0.3rem; }
 .footer-sub { font-size: 0.8rem; color: var(--text-muted); }
 .footer-links { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-end; }
 .footer-links a { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
@@ -289,27 +296,29 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
 
 <div class="marquee-bar">
   <div class="marquee-inner">
-    ✦ GROWTH STRATEGY &nbsp;&nbsp;·&nbsp;&nbsp; KEY ACCOUNT MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; DATA ANALYSIS &nbsp;&nbsp;·&nbsp;&nbsp; A/B TESTING &nbsp;&nbsp;·&nbsp;&nbsp; FUNNEL OPTIMISATION &nbsp;&nbsp;·&nbsp;&nbsp; STAKEHOLDER COMMUNICATION &nbsp;&nbsp;·&nbsp;&nbsp; POWER BI &nbsp;&nbsp;·&nbsp;&nbsp; ADVANCED EXCEL &nbsp;&nbsp;·&nbsp;&nbsp; ✦ GROWTH STRATEGY &nbsp;&nbsp;·&nbsp;&nbsp; KEY ACCOUNT MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; DATA ANALYSIS &nbsp;&nbsp;·&nbsp;&nbsp; A/B TESTING &nbsp;&nbsp;·&nbsp;&nbsp; FUNNEL OPTIMISATION &nbsp;&nbsp;·&nbsp;&nbsp; STAKEHOLDER COMMUNICATION &nbsp;&nbsp;·&nbsp;&nbsp; POWER BI &nbsp;&nbsp;·&nbsp;&nbsp; ADVANCED EXCEL &nbsp;&nbsp;·&nbsp;&nbsp;
+    ✦ CLIENT RELATIONSHIP MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; ACCOUNT GROWTH &amp; RETENTION &nbsp;&nbsp;·&nbsp;&nbsp; ENTERPRISE STAKEHOLDER MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; ESCALATION RESOLUTION &nbsp;&nbsp;·&nbsp;&nbsp; RENEWALS &amp; NEGOTIATION &nbsp;&nbsp;·&nbsp;&nbsp; CROSS-FUNCTIONAL COLLABORATION &nbsp;&nbsp;·&nbsp;&nbsp; DATA-DRIVEN QBRS &nbsp;&nbsp;·&nbsp;&nbsp; REMOTE &amp; CROSS-TIMEZONE COLLABORATION &nbsp;&nbsp;·&nbsp;&nbsp; POWER BI &nbsp;&nbsp;·&nbsp;&nbsp; ✦ CLIENT RELATIONSHIP MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; ACCOUNT GROWTH &amp; RETENTION &nbsp;&nbsp;·&nbsp;&nbsp; ENTERPRISE STAKEHOLDER MANAGEMENT &nbsp;&nbsp;·&nbsp;&nbsp; ESCALATION RESOLUTION &nbsp;&nbsp;·&nbsp;&nbsp; RENEWALS &amp; NEGOTIATION &nbsp;&nbsp;·&nbsp;&nbsp; CROSS-FUNCTIONAL COLLABORATION &nbsp;&nbsp;·&nbsp;&nbsp; DATA-DRIVEN QBRS &nbsp;&nbsp;·&nbsp;&nbsp; REMOTE &amp; CROSS-TIMEZONE COLLABORATION &nbsp;&nbsp;·&nbsp;&nbsp; POWER BI &nbsp;&nbsp;·&nbsp;&nbsp;
   </div>
 </div>
 
 <div class="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow"><span class="dot"></span> Currently @ Zomato, Delhi</div>
+    <div class="hero-eyebrow"><span class="dot"></span> Category Manager @ Zomato, Delhi</div>
     <h1 class="hero-name">Hey, I'm<br>Apeksha <em>Raina</em> <span class="wave">👋</span></h1>
-    <p class="hero-bio">Growth strategist with a knack for turning data into decisions. I own a <strong>₹100Cr+/month market</strong> at Zomato, building frameworks that drive revenue, improve forecast accuracy, and make campaigns work meaningfully harder.</p>
+    <p class="hero-bio">Client-first growth leader who turns high-stakes accounts into long-term partnerships. I own the relationship for a <strong>$15.8M+/month portfolio</strong> at Zomato, as the direct point of contact for founders and CXOs across 16 enterprise brands: resolving escalations, driving renewals, and turning trust into growth. Comfortable working async across US time zones.</p>
     <div class="hero-contact">
       <a href="mailto:rainapeksha7@gmail.com">📧 rainapeksha7@gmail.com</a>
       <a href="tel:+918700644494">📱 +91 87006 44494</a>
     </div>
+    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:1.25rem;">This page is my complete, always-current professional profile. Everything you need is right here.</p>
   </div>
   <div class="hero-aside">
     <div class="hero-tags">
-      <div class="tag peach">Growth Strategy</div>
-      <div class="tag sage">Data Analysis</div>
-      <div class="tag">Key Account Management</div>
-      <div class="tag lavender">A/B Testing</div>
-      <div class="tag">SRCC, DU — 8.81 GPA</div>
+      <div class="tag peach">Client Relationship Mgmt</div>
+      <div class="tag sage">Account Growth &amp; Retention</div>
+      <div class="tag">Escalation Resolution</div>
+      <div class="tag lavender">Enterprise Stakeholder Mgmt</div>
+      <div class="tag">SRCC, DU, 8.81 GPA</div>
+      <div class="tag sage">Registered Kundalini Yoga Teacher, Yoga Alliance</div>
     </div>
   </div>
 </div>
@@ -321,10 +330,10 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
   <h2 class="section-heading">Where I've been building</h2>
 
   <div class="stats-row">
-    <div class="stat-box"><div class="stat-num">30%+</div><div class="stat-desc">YoY Revenue Growth</div></div>
-    <div class="stat-box"><div class="stat-num">50%</div><div class="stat-desc">AOV Increase YoY</div></div>
-    <div class="stat-box"><div class="stat-num">15–25%</div><div class="stat-desc">Campaign ROI Lift</div></div>
-    <div class="stat-box"><div class="stat-num">5%</div><div class="stat-desc">QoQ Retention Gain</div></div>
+    <div class="stat-box"><div class="stat-num">$15.8M+</div><div class="stat-desc">Monthly Portfolio Owned</div></div>
+    <div class="stat-box"><div class="stat-num">16</div><div class="stat-desc">Enterprise Accounts Managed</div></div>
+    <div class="stat-box"><div class="stat-num">12%→5%</div><div class="stat-desc">Support Escalations Cut</div></div>
+    <div class="stat-box"><div class="stat-num">20%</div><div class="stat-desc">YoY Ad Revenue Growth</div></div>
   </div>
 
   <div class="exp-cards">
@@ -333,11 +342,11 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
       <div class="exp-card-header" onclick="toggle(this)">
         <div>
           <div class="exp-company">Zomato</div>
-          <div class="exp-role">Key Accounts Manager</div>
+          <div class="exp-role">Category Manager, Cloud Kitchen</div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:1rem;">
           <div class="exp-right">
-            <div class="exp-date">Sep 2024 – Present</div>
+            <div class="exp-date">Jul 2026 – Present</div>
             <div class="exp-chip">Full-time</div>
           </div>
           <div class="exp-toggle">+</div>
@@ -345,24 +354,76 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
       </div>
       <div class="exp-body">
         <ul class="exp-bullets">
-          <li>Owned and scaled JFL portfolio, delivering 30%+ YoY growth through pricing, merchandising, and geo-led investment optimization.</li>
-          <li>Improved forecast accuracy to ~70% in a ₹100Cr monthly market by building structured performance frameworks strengthening planning discipline.</li>
-          <li>Led 0→1 and iterative product launches — translating consumer insights into experiments that improved adoption, AOV (~50% YoY), and retention (5% QoQ).</li>
-          <li>Increased campaign ROI by 15–25% by driving strategic partnerships to capture demand spikes and optimizing allocation between promotions and in-app ads.</li>
-          <li>Drove cross-functional initiatives with product, ops, and tech — reducing support-requiring orders from 12% → 5% QoQ.</li>
-          <li>Negotiated complex commercials improving contribution margins by 5% while strengthening long-term partner alignment.</li>
-          <li>Onboarded 100+ stores using geo expansion playbooks with Kepler and heat maps technology.</li>
-          <li>Delivered ~30% uplift in cuisine share by improving ROI and reducing CAC through sharper user segmentation and focused performance marketing, driving efficient customer acquisition, stronger unit economics, and scalable growth across brands.</li>
-          <li>Moved brands from standard ad-spend commitments to incremental revenue-share model, unlocking ~52% higher ad revenue.</li>
-          <li>Drove better conversions by optimizing discounts and menu engineering, replacing flat packaging fees with AOV-linked pricing — improving cart-to-order conversion and reducing price-shock-led drop-offs.</li>
-          <li>Increased AOV by ~11% by aligning brand participation and campaign mix across seasonal and festival campaigns on platform.</li>
-          <li>Delivered ~5 percentage point increase in brand share across platforms and drove the portfolio to an all-time high.</li>
-          <li>Scaled a self-logistics brand to Zomato Logistics, expanding delivery subzones and driving a 30% increase in sales. Reduced bad-order escalations by 50%+ through stronger tracking and support systems, and boosted market share by consolidating the brand exclusively on Zomato.</li>
+          <li>Own the end-to-end client relationship for a $15.8M+/month portfolio, as the single point of contact for founders and CXOs across 16 national brands, delivering 25% YoY growth and capturing 4% competitor market share.</li>
+          <li>Lead Joint Business Plan (JBP) reviews and commercial renegotiations, the enterprise equivalent of quarterly business reviews, aligning each partner's goals with what actually moves their numbers.</li>
+          <li>Grew ad revenue 20% YoY (~$84K incremental) by understanding client objectives well enough to recommend the right investment, not just the largest one, and monetized $21K+ in premium event branding.</li>
+          <li>Coach and mentor 3 account managers, building structured onboarding modules that shorten ramp-up time and standardize how the team handles client escalations.</li>
+          <li>Partner daily with Tech, Product, and Ops to close the merchant-tooling and workflow gaps clients raise most often, turning recurring complaints into permanent fixes and lifting conversions by 2%.</li>
         </ul>
         <div class="exp-mini-stats">
-          <div class="mini-stat"><div class="mini-stat-num">₹100Cr</div><div class="mini-stat-label">Monthly market</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">$15.8M+</div><div class="mini-stat-label">Monthly portfolio</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">16</div><div class="mini-stat-label">Enterprise brands</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">3</div><div class="mini-stat-label">Managers mentored</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header" onclick="toggle(this)">
+        <div>
+          <div class="exp-company">Zomato</div>
+          <div class="exp-role">Category Manager, Pizza</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div class="exp-right">
+            <div class="exp-date">Feb 2026 – Jul 2026</div>
+            <div class="exp-chip">Full-time</div>
+          </div>
+          <div class="exp-toggle">+</div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-bullets">
+          <li>Rebuilt trust with underperforming partners by resolving operational escalations before they turned into churn, salvaging ~$53K in at-risk sales.</li>
+          <li>Renegotiated refund-sharing and fee terms that had frustrated partners for years, landing a 50% refund-share and a fixed 0.2% net-sales recovery rate both sides could live with.</li>
+          <li>Untangled a legacy financial reconciliation dispute worth ~$570K dating back to 2014, working across Legal and Finance to close an issue that had quietly eroded partner trust for years.</li>
+          <li>Lifted rider ping compliance from ~70% to ~85% and doubled ad ROI YoY, proof that fixing the operational experience shows up directly in the client relationship.</li>
+          <li>Grew regional cuisine share ~3% YoY while improving margins, and increased late-night market share by 4% through mealtime segment analysis.</li>
+        </ul>
+        <div class="exp-mini-stats">
+          <div class="mini-stat"><div class="mini-stat-num">~$53K</div><div class="mini-stat-label">At-risk sales saved</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">~$570K</div><div class="mini-stat-label">Legacy dispute resolved</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">70%→85%</div><div class="mini-stat-label">Rider SLA compliance</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header" onclick="toggle(this)">
+        <div>
+          <div class="exp-company">Zomato</div>
+          <div class="exp-role">Key Accounts Manager</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+          <div class="exp-right">
+            <div class="exp-date">Sep 2024 – Jan 2026</div>
+            <div class="exp-chip">Full-time</div>
+          </div>
+          <div class="exp-toggle">+</div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-bullets">
+          <li>Owned the day-to-day relationship for the JFL portfolio (5 brands, ~2.5% of platform revenue), delivering 30%+ YoY growth through pricing, merchandising, and geo-led investment.</li>
+          <li>Reduced support-required orders from 12% to 5% QoQ by driving cross-functional fixes across CX workflows and promo tooling, the same escalation-to-resolution loop that drives net retention on enterprise accounts.</li>
+          <li>Generated ~$1.05M incremental monthly revenue by optimizing budget allocation between promotions and in-app ads (15–25% campaign ROI improvement).</li>
+          <li>Increased cuisine share ~30% by redesigning performance marketing strategy using advanced segmentation to reduce CAC, growth built on understanding what each partner actually needed.</li>
+          <li>Led logistics and geo-expansion initiatives (100+ stores onboarded), driving 30% sales growth and 5% margin improvement.</li>
+        </ul>
+        <div class="exp-mini-stats">
           <div class="mini-stat"><div class="mini-stat-num">100+</div><div class="mini-stat-label">Stores onboarded</div></div>
-          <div class="mini-stat"><div class="mini-stat-num">~70%</div><div class="mini-stat-label">Forecast accuracy</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">12%→5%</div><div class="mini-stat-label">Escalations reduced</div></div>
+          <div class="mini-stat"><div class="mini-stat-num">~$1.05M</div><div class="mini-stat-label">Incremental monthly revenue</div></div>
         </div>
       </div>
     </div>
@@ -427,7 +488,7 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
       </div>
       <div class="exp-body">
         <ul class="exp-bullets">
-          <li>Organized major events including National Handloom Day and Indiajoy — 5,000+ attendees each.</li>
+          <li>Organized major events including National Handloom Day and Indiajoy, 5,000+ attendees each.</li>
           <li>Managed global youth webinars engaging 1,000+ participants. Received LOR from CEO.</li>
         </ul>
       </div>
@@ -469,13 +530,13 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
     <div class="social-card">
       <div class="social-emoji">🏭</div>
       <div class="social-title">Project Asha &amp; Vittshala</div>
-      <div class="social-desc">Visited 20+ factories and slums across Delhi — Goonj NGO, Bawana &amp; Kadipur Industrial Areas.</div>
+      <div class="social-desc">Visited 20+ factories and slums across Delhi, with Goonj NGO, Bawana &amp; Kadipur Industrial Areas.</div>
       <div class="social-impact">200+ lives impacted</div>
     </div>
     <div class="social-card">
       <div class="social-emoji">📚</div>
       <div class="social-title">Project Khushhali</div>
-      <div class="social-desc">Palwal, Haryana — covered 7 villages in 2 days, inculcating financial literacy in rural communities.</div>
+      <div class="social-desc">Palwal, Haryana. Covered 7 villages in 2 days, inculcating financial literacy in rural communities.</div>
       <div class="social-impact">200+ people reached</div>
     </div>
     <div class="social-card">
@@ -494,33 +555,33 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
   <h2 class="section-heading">What I bring to the table</h2>
   <table class="skills-table">
     <tr>
-      <td>📈</td>
-      <td>Growth &amp; Funnel Optimisation</td>
+      <td>🤝</td>
+      <td>Client Relationship &amp; Enterprise Account Management</td>
       <td><span class="skills-badge peach">Core Skill</span></td>
     </tr>
     <tr>
-      <td>📊</td>
-      <td>Excel &amp; Google Sheets</td>
-      <td><span class="skills-badge">Advanced Modelling</span></td>
-    </tr>
-    <tr>
-      <td>🧪</td>
-      <td>Experimentation &amp; A/B Testing</td>
-      <td><span class="skills-badge peach">Core Skill</span></td>
-    </tr>
-    <tr>
-      <td>🔍</td>
-      <td>Data Analysis &amp; Insight Generation</td>
+      <td>🛠️</td>
+      <td>Escalation Resolution &amp; Cross-functional Problem Solving</td>
       <td><span class="skills-badge peach">Core Skill</span></td>
     </tr>
     <tr>
       <td>🤝</td>
-      <td>Technical Stakeholder Communication</td>
+      <td>Renewals, Renegotiation &amp; Commercial Alignment</td>
+      <td><span class="skills-badge peach">Core Skill</span></td>
+    </tr>
+    <tr>
+      <td>🔍</td>
+      <td>Data Analysis &amp; Business Reviews (JBP / QBR)</td>
+      <td><span class="skills-badge">Reporting &amp; Insight</span></td>
+    </tr>
+    <tr>
+      <td>🎓</td>
+      <td>Onboarding, Coaching &amp; Team Enablement</td>
       <td><span class="skills-badge lavender">Soft Skill</span></td>
     </tr>
     <tr>
       <td>📉</td>
-      <td>Power BI &amp; Presentations</td>
+      <td>Power BI, Advanced Excel &amp; Presentations</td>
       <td><span class="skills-badge">Reporting &amp; Viz</span></td>
     </tr>
   </table>
@@ -529,7 +590,8 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
 <footer>
   <div class="footer-left">
     <div class="footer-name">Apeksha Raina</div>
-    <div class="footer-sub">Key Accounts Manager · Zomato · Delhi</div>
+    <div class="footer-sub">Category Manager · Zomato · Delhi</div>
+    <div class="footer-sub" style="margin-top:0.4rem;">Open to remote Customer Success &amp; Client Growth roles with US startups. Let's talk.</div>
   </div>
   <div class="footer-links">
     <a href="mailto:rainapeksha7@gmail.com">rainapeksha7@gmail.com</a>
@@ -545,3 +607,4 @@ footer { max-width: 900px; margin: 0 auto; padding: 3rem; border-top: 1px solid 
 </script>
 </body>
 </html>
+apeksha.raina@zomato.com@MacBook-Air-(2) ~ % 
